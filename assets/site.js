@@ -9,4 +9,29 @@ function handleContact(e){e.preventDefault();const f=e.target;const subject=enco
 Email: ${f.email.value}
 Organization: ${f.organization.value}
 
-${f.message.value}`);document.getElementById('form-status').textContent='Your email client will open with the enquiry prepared.';window.location.href=`mailto:?subject=${subject}&body=${body}`;return false}
+
+function handleContact(e) {
+  e.preventDefault();
+
+  const f = e.target;
+  const subject = encodeURIComponent(
+    'QXcellence Consultation Enquiry'
+  );
+
+  const body = encodeURIComponent(
+    `Name: ${f.name.value}
+Email: ${f.email.value}
+Organization: ${f.organization.value}
+
+Enquiry:
+${f.message.value}`
+  );
+
+  document.getElementById('form-status').textContent =
+    'Opening your email application to send the enquiry.';
+
+  window.location.href =
+    `mailto:info@qxcellence.co?subject=${subject}&body=${body}`;
+
+  return false;
+}
