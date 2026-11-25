@@ -3,19 +3,31 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Meet Osman Aboud, Founder and Principal Advisor of QXcellence, a quality, operational excellence and strategic transformation leader with 25+ years of experience.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Meet Osman Aboud, Founder and Principal Advisor of QXcellence. A senior Quality and Strategic Transformation Leader with 25+ years of experience across construction, infrastructure and major programmes.">
+
   <title>Founder & Principal Advisor | QXcellence</title>
+
   <link rel="stylesheet" href="assets/styles.css">
 
   <style>
-    .founder-profile { padding: 70px 0; }
+    /* FOUNDER PAGE */
+    .founder-profile {
+      padding: 75px 0;
+    }
+
     .founder-grid {
       display: grid;
-      grid-template-columns: minmax(280px, .85fr) 1.4fr;
+      grid-template-columns: minmax(260px, 0.85fr) 1.5fr;
       gap: 55px;
       align-items: start;
     }
+
+    .founder-image {
+      position: relative;
+    }
+
     .founder-photo {
       width: 100%;
       aspect-ratio: 4 / 5;
@@ -23,334 +35,618 @@
       object-position: center top;
       border-radius: 16px;
       display: block;
+      box-shadow: 0 12px 35px rgba(0,0,0,.12);
     }
-    .founder-caption { margin-top: 18px; }
-    .founder-caption h2 { margin-bottom: 5px; }
-    .founder-caption p { margin: 0; opacity: .8; }
-    .founder-copy h2 { margin-top: 0; }
-    .founder-copy p { line-height: 1.8; }
+
+    .founder-caption {
+      margin-top: 20px;
+    }
+
+    .founder-caption h2 {
+      margin-bottom: 5px;
+    }
+
+    .founder-caption p {
+      margin: 0;
+      opacity: .8;
+    }
+
+    .founder-copy h2 {
+      margin-top: 0;
+    }
+
+    .founder-copy p {
+      line-height: 1.85;
+      margin-bottom: 17px;
+    }
+
     .founder-quote {
       margin: 28px 0;
       padding: 24px;
       border-left: 4px solid #b89a62;
       background: rgba(128,128,128,.07);
       border-radius: 0 10px 10px 0;
-      font-size: 1.12rem;
-      line-height: 1.7;
+      font-size: 1.1rem;
+      line-height: 1.75;
       font-weight: 500;
     }
-    .founder-section { padding: 55px 0; }
-    .founder-section h2 { margin-bottom: 25px; }
+
+    .founder-section {
+      padding: 60px 0;
+    }
+
+    .founder-section h2 {
+      margin-bottom: 15px;
+    }
+
+    .section-intro {
+      max-width: 850px;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
     .founder-cards {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 30px;
     }
+
     .founder-card {
-      padding: 23px;
+      padding: 25px;
       border: 1px solid rgba(128,128,128,.22);
-      border-radius: 12px;
+      border-radius: 14px;
+      background: rgba(128,128,128,.035);
     }
-    .founder-card h3 { margin-top: 0; }
-    .founder-list {
-      display: grid;
-      grid-template-columns: repeat(2,minmax(0,1fr));
-      gap: 14px 35px;
-      padding: 0;
-      list-style: none;
+
+    .founder-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
     }
-    .founder-list li {
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(128,128,128,.2);
-      line-height: 1.6;
+
+    .founder-card p,
+    .founder-card li {
+      line-height: 1.7;
+      font-size: .95rem;
     }
-    .founder-cta {
-      padding: 40px;
-      border-radius: 16px;
-      background: rgba(128,128,128,.08);
-      text-align: center;
+
+    .founder-card ul {
+      padding-left: 20px;
+      margin-bottom: 0;
     }
-    .founder-cta .button-link {
+
+    .founder-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .founder-tag {
       display: inline-block;
-      margin: 10px 8px;
-      padding: 12px 23px;
-      border-radius: 6px;
-      border: 1px solid currentColor;
+      padding: 8px 13px;
+      border-radius: 30px;
+      border: 1px solid rgba(184,154,98,.55);
+      font-size: .88rem;
+    }
+
+    .founder-credentials {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px 30px;
+      margin-top: 25px;
+    }
+
+    .founder-credential {
+      padding: 15px 18px;
+      border-left: 3px solid #b89a62;
+      background: rgba(128,128,128,.055);
+      line-height: 1.65;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .founder-recognition {
+      padding-left: 20px;
+      line-height: 1.9;
+    }
+
+    .founder-cta {
+      padding: 55px 30px;
+      text-align: center;
+      border-radius: 16px;
+      background: rgba(128,128,128,.07);
+    }
+
+    .founder-cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .founder-cta p {
+      max-width: 720px;
+      margin: 0 auto 25px;
+      line-height: 1.8;
+    }
+
+    .founder-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .founder-links a {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 7px;
       text-decoration: none;
       font-weight: 600;
+      border: 1px solid #b89a62;
     }
-    @media(max-width:800px) {
-      .founder-grid { grid-template-columns: 1fr; gap: 30px; }
-      .founder-photo { max-width: 430px; margin: auto; }
-      .founder-cards { grid-template-columns: 1fr; }
-      .founder-list { grid-template-columns: 1fr; }
-      .founder-cta { padding: 25px 18px; }
+
+    .founder-links a:hover {
+      opacity: .8;
+    }
+
+    @media (max-width: 850px) {
+      .founder-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .founder-image {
+        max-width: 430px;
+        margin: 0 auto;
+      }
+
+      .founder-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .founder-profile,
+      .founder-section {
+        padding: 42px 0;
+      }
+
+      .founder-cards,
+      .founder-credentials {
+        grid-template-columns: 1fr;
+      }
+
+      .founder-cta {
+        padding: 38px 20px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="container nav">
-    <a class="logo" href="index.html">QX<span>cellence</span></a>
-    <nav>
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="academy.html">Academy</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <!-- WEBSITE HEADER -->
+  <header>
+    <div class="container nav">
+      <a class="logo" href="index.html">
+        QX<span>cellence</span>
+      </a>
 
-<main>
-
-  <!-- Founder introduction -->
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow">FOUNDER & PRINCIPAL ADVISOR</span>
-      <h1>Leadership. Excellence. Transformation.</h1>
-      <p>
-        Meet the industry leader behind QXcellence, bringing more than
-        25 years of experience in quality leadership, operational excellence,
-        infrastructure assurance and strategic transformation.
-      </p>
+      <nav>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="academy.html">Academy</a></li>
+          <li><a href="founder.html">Founder</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- Executive biography and photograph -->
-  <section class="founder-profile">
-    <div class="container founder-grid">
+  <main>
 
-      <div>
-        <img
-          class="founder-photo"
-          src="assets/osman-aboud-founder.jpg"
-          alt="Osman Aboud, Founder and Principal Advisor of QXcellence"
-          loading="eager"
-        >
-        <div class="founder-caption">
-          <h2>Osman Aboud</h2>
-          <p>Founder & Principal Advisor, QXcellence</p>
-          <p>Quality | Operational Excellence | Strategic Transformation</p>
-        </div>
-      </div>
-
-      <div class="founder-copy">
-        <span class="eyebrow">THE FOUNDER</span>
-        <h2>Experience that connects quality to business performance.</h2>
-
+    <!-- PAGE INTRODUCTION -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">LEADERSHIP & EXPERIENCE</span>
+        <h1>Founder & Principal Advisor</h1>
         <p>
-          Osman Aboud is a senior Quality, Operational Excellence and
-          Strategic Transformation executive with more than 25 years
-          of professional experience across major infrastructure,
-          construction, aviation, data centre and government-related
-          programmes.
-        </p>
-
-        <p>
-          Throughout his career, he has held senior quality leadership
-          positions, helping organisations strengthen enterprise quality
-          governance, improve project performance, enhance compliance
-          and assurance, and embed sustainable continuous improvement.
-          His experience includes complex programmes such as Diriyah,
-          King Khalid International Airport, NHC, Red Sea developments
-          and data centre projects in Saudi Arabia.
-        </p>
-
-        <p>
-          His leadership approach combines strategic direction with
-          practical delivery experience. He believes quality must be
-          integrated into business strategy, project governance,
-          risk management, supply chain performance and operational
-          decision-making — rather than treated simply as an inspection
-          or compliance activity.
-        </p>
-
-        <p>
-          Osman is also a strong advocate of Quality 4.0, artificial
-          intelligence, digital assurance, data analytics and predictive
-          quality management. He is particularly interested in how
-          emerging technologies can transform traditional quality
-          systems into proactive, intelligent and measurable business
-          performance capabilities.
-        </p>
-
-        <div class="founder-quote">
-          "Quality is not just about meeting requirements. It is about
-          creating confidence, improving performance and delivering
-          sustainable business value."
-        </div>
-
-        <p>
-          Through QXcellence, Osman brings together executive advisory,
-          professional development, organisational transformation and
-          digital innovation to help organisations and professionals
-          achieve higher levels of performance and business excellence.
+          Bringing together executive quality leadership, strategic
+          transformation and operational excellence to help organisations
+          achieve better performance and sustainable results.
         </p>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- FOUNDER PROFILE -->
+    <section class="founder-profile">
+      <div class="container">
+        <div class="founder-grid">
 
-  <!-- Expertise -->
-  <section class="founder-section">
-    <div class="container">
-      <span class="eyebrow">AREAS OF EXPERTISE</span>
-      <h2>Professional expertise and leadership focus</h2>
+          <!-- FOUNDER PHOTOGRAPH -->
+          <div class="founder-image">
 
-      <div class="tags">
-        <span class="tag">Enterprise Quality Governance</span>
-        <span class="tag">Quality & Operational Excellence</span>
-        <span class="tag">Strategic Transformation</span>
-        <span class="tag">Construction & Infrastructure</span>
-        <span class="tag">Data Centre Assurance</span>
-        <span class="tag">Integrated Management Systems</span>
-        <span class="tag">Risk-Based Assurance</span>
-        <span class="tag">Quality 4.0</span>
-        <span class="tag">AI-Enabled Quality</span>
-        <span class="tag">Digital Transformation</span>
-        <span class="tag">Performance Improvement</span>
-        <span class="tag">Business Excellence</span>
+            <img
+              class="founder-photo"
+              src="assets/osman-aboud-founder.jpg"
+              alt="Osman Aboud, Founder and Principal Advisor of QXcellence"
+            >
+
+            <div class="founder-caption">
+              <h2>Osman Aboud</h2>
+              <p>Founder & Principal Advisor, QXcellence</p>
+            </div>
+
+          </div>
+
+          <!-- EXECUTIVE BIOGRAPHY -->
+          <div class="founder-copy">
+
+            <span class="eyebrow">ABOUT THE FOUNDER</span>
+
+            <h2>Experience that connects quality to business performance.</h2>
+
+            <p>
+              Osman Aboud is a senior Quality and Strategic Transformation
+              Leader with more than 25 years of professional experience
+              across major construction, infrastructure and government-related
+              programmes, with extensive experience in Saudi Arabia and
+              international project environments.
+            </p>
+
+            <p>
+              Throughout his career, Osman has held senior leadership
+              positions with responsibility for quality governance,
+              enterprise assurance, integrated management systems,
+              operational excellence, compliance, audit and performance
+              improvement. His experience spans complex infrastructure,
+              aviation, building, utilities and data centre environments.
+            </p>
+
+            <p>
+              His professional approach goes beyond traditional inspection
+              and compliance. He believes quality should be embedded in
+              organisational strategy, project governance, leadership
+              accountability and everyday decision-making.
+            </p>
+
+            <p>
+              Osman has contributed to major programmes and projects
+              including Diriyah, King Khalid International Airport,
+              National Housing Company developments, Red Sea projects
+              and data centre programmes.
+            </p>
+
+            <div class="founder-quote">
+              "Quality is not simply about finding defects. It is about
+              building the leadership, systems, intelligence and culture
+              that prevent problems, improve performance and create
+              lasting value."
+            </div>
+
+            <p>
+              As Founder and Principal Advisor of QXcellence, Osman brings
+              this experience to organisations seeking stronger quality
+              systems, improved project delivery, digital assurance and
+              sustainable business excellence.
+            </p>
+
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Leadership experience -->
-  <section class="founder-section">
-    <div class="container">
-      <span class="eyebrow">INDUSTRY EXPERIENCE</span>
-      <h2>Leadership across complex programmes</h2>
+    <!-- PROFESSIONAL EXPERTISE -->
+    <section class="founder-section">
+      <div class="container">
 
-      <div class="founder-cards">
+        <span class="eyebrow">AREAS OF EXPERTISE</span>
+        <h2>Leadership across quality, assurance and transformation</h2>
 
-        <div class="founder-card">
-          <h3>Infrastructure & Mega Projects</h3>
-          <p>
-            Quality governance, project assurance and performance
-            improvement across major infrastructure and development
-            programmes, including Diriyah, King Khalid International
-            Airport, NHC and Red Sea developments.
-          </p>
-        </div>
+        <p class="section-intro">
+          A multidisciplinary perspective combining executive leadership,
+          technical assurance, governance and continuous improvement.
+        </p>
 
-        <div class="founder-card">
-          <h3>Data Centre Assurance</h3>
-          <p>
-            Quality and QHSE leadership across critical data centre
-            environments, including civil, structural, MEP, ELV,
-            testing, commissioning and operational readiness.
-          </p>
-        </div>
-
-        <div class="founder-card">
-          <h3>Enterprise Transformation</h3>
-          <p>
-            Integrated management systems, quality transformation,
-            risk-based assurance, audit governance, performance
-            measurement and continuous improvement.
-          </p>
+        <div class="founder-tags">
+          <span class="founder-tag">Executive Quality Leadership</span>
+          <span class="founder-tag">Quality Governance</span>
+          <span class="founder-tag">Enterprise Assurance</span>
+          <span class="founder-tag">Operational Excellence</span>
+          <span class="founder-tag">Strategic Transformation</span>
+          <span class="founder-tag">Construction & Infrastructure</span>
+          <span class="founder-tag">Data Centre Quality Assurance</span>
+          <span class="founder-tag">Integrated Management Systems</span>
+          <span class="founder-tag">Risk-Based Auditing</span>
+          <span class="founder-tag">Quality 4.0</span>
+          <span class="founder-tag">AI-Enabled Quality</span>
+          <span class="founder-tag">Performance Improvement</span>
         </div>
 
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Credentials -->
-  <section class="founder-section">
-    <div class="container">
-      <span class="eyebrow">PROFESSIONAL CREDENTIALS</span>
-      <h2>Qualifications and professional affiliations</h2>
+    <!-- MAJOR PROGRAMME EXPERIENCE -->
+    <section class="founder-section">
+      <div class="container">
 
-      <ul class="founder-list">
-        <li>Project Management Professional (PMP)</li>
-        <li>Risk Management Professional (RMP)</li>
-        <li>ASQ Certified Manager of Quality / Organizational Excellence (CMQ/OE)</li>
-        <li>ASQ Certified Construction Quality Manager</li>
-        <li>ISO 9001, ISO 14001 & ISO 45001 Lead Auditor</li>
-        <li>Lean Six Sigma Green Belt – IASSC, USA</li>
-        <li>EFQM & African Excellence Framework Assessor</li>
-        <li>Senior Member – American Society for Quality (ASQ)</li>
-        <li>FIDIC Quality Task Group Member</li>
-        <li>Professional Engineer – Saudi Council of Engineers</li>
-      </ul>
-    </div>
-  </section>
+        <span class="eyebrow">PROGRAMME EXPERIENCE</span>
+        <h2>Experience across complex and high-value programmes</h2>
 
-  <!-- Recognition -->
-  <section class="founder-section">
-    <div class="container">
-      <span class="eyebrow">PROFESSIONAL RECOGNITION</span>
-      <h2>Contributing to the global quality profession</h2>
+        <p class="section-intro">
+          Leadership and quality assurance experience across major
+          infrastructure, construction, aviation, residential and
+          mission-critical environments.
+        </p>
 
-      <div class="founder-cards">
-        <div class="founder-card">
-          <h3>International Speaker</h3>
-          <p>
-            Keynote speaker at the ASQ EMEA Conference 2024 and
-            speaker at ASQ Synergy for Success 2025.
-          </p>
-        </div>
+        <div class="founder-cards">
 
-        <div class="founder-card">
-          <h3>Professional Recognition</h3>
-          <p>
-            Recipient of the AECOM Quality Star 2024 recognition
-            and judge for the ASQ International Team Excellence Award.
-          </p>
-        </div>
+          <div class="founder-card">
+            <h3>Diriyah</h3>
+            <p>
+              Quality governance and project assurance across multiple
+              development projects, strengthening document control,
+              field verification, inspection processes and consistency
+              of quality delivery.
+            </p>
+          </div>
 
-        <div class="founder-card">
-          <h3>Knowledge & Publications</h3>
-          <p>
-            Contributor to professional publications and quality
-            knowledge-sharing initiatives covering quality improvement,
-            sustainability and emerging Quality 4.0 practices.
-          </p>
+          <div class="founder-card">
+            <h3>King Khalid International Airport</h3>
+            <p>
+              Quality leadership for major airport renovation and
+              expansion works involving terminal facilities, MEP
+              systems, contractors and live operational environments.
+            </p>
+          </div>
+
+          <div class="founder-card">
+            <h3>Data Centre Programmes</h3>
+            <p>
+              Quality and HSE assurance across mission-critical
+              facilities, including civil, structural, MEP, ELV,
+              testing, commissioning and operational readiness.
+            </p>
+          </div>
+
+          <div class="founder-card">
+            <h3>National Housing Company</h3>
+            <p>
+              Quality management and performance improvement across
+              residential and development programmes, supporting
+              governance, process consistency and operational efficiency.
+            </p>
+          </div>
+
+          <div class="founder-card">
+            <h3>Red Sea Developments</h3>
+            <p>
+              Quality and assurance experience in complex development
+              environments, supporting project delivery, compliance
+              and integrated management practices.
+            </p>
+          </div>
+
+          <div class="founder-card">
+            <h3>Enterprise Transformation</h3>
+            <p>
+              Development and improvement of management systems,
+              assurance frameworks, performance indicators and
+              data-driven quality improvement approaches.
+            </p>
+          </div>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Vision -->
-  <section class="founder-section">
-    <div class="container">
-      <div class="founder-cta">
+    <!-- PROFESSIONAL CREDENTIALS -->
+    <section class="founder-section">
+      <div class="container">
+
+        <span class="eyebrow">PROFESSIONAL CREDENTIALS</span>
+        <h2>Professional qualifications and certifications</h2>
+
+        <p class="section-intro">
+          A combination of internationally recognised professional
+          certifications, quality management credentials, project
+          management qualifications and excellence assessment experience.
+        </p>
+
+        <div class="founder-credentials">
+
+          <div class="founder-credential">
+            <strong>ASQ Certified Manager of Quality / Organizational Excellence</strong>
+            <br>CMQ/OE
+          </div>
+
+          <div class="founder-credential">
+            <strong>ASQ Certified Construction Quality Manager</strong>
+          </div>
+
+          <div class="founder-credential">
+            <strong>Project Management Professional</strong>
+            <br>PMP
+          </div>
+
+          <div class="founder-credential">
+            <strong>Risk Management Professional</strong>
+            <br>RMP
+          </div>
+
+          <div class="founder-credential">
+            <strong>Integrated Management Systems Lead Auditor</strong>
+            <br>ISO 9001, ISO 14001 and ISO 45001
+          </div>
+
+          <div class="founder-credential">
+            <strong>Lean Six Sigma Green Belt</strong>
+            <br>IASSC-USA
+          </div>
+
+          <div class="founder-credential">
+            <strong>EFQM & African Excellence Framework Assessor</strong>
+          </div>
+
+          <div class="founder-credential">
+            <strong>African Excellence Framework Certified Trainer</strong>
+          </div>
+
+          <div class="founder-credential">
+            <strong>ASQ Senior Member</strong>
+          </div>
+
+          <div class="founder-credential">
+            <strong>FIDIC Quality Task Group Member</strong>
+            <br>Geneva
+          </div>
+
+          <div class="founder-credential">
+            <strong>Professional Engineer</strong>
+            <br>Saudi Council of Engineers
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL RECOGNITION -->
+    <section class="founder-section">
+      <div class="container">
+
+        <span class="eyebrow">RECOGNITION & CONTRIBUTIONS</span>
+        <h2>Professional recognition and industry engagement</h2>
+
+        <p class="section-intro">
+          Active contribution to the quality profession through
+          professional speaking, technical review, industry engagement
+          and knowledge sharing.
+        </p>
+
+        <ul class="founder-recognition">
+
+          <li>
+            Keynote speaker at the ASQ EMEA Conference 2024.
+          </li>
+
+          <li>
+            Speaker at ASQ Synergy for Success 2025.
+          </li>
+
+          <li>
+            Recipient of AECOM Quality Star 2024 recognition.
+          </li>
+
+          <li>
+            Judge for the ASQ International Team Excellence Award.
+          </li>
+
+          <li>
+            Reviewer of papers for the ASQ Quality 4.0 Summit.
+          </li>
+
+          <li>
+            Contributor to professional publications on quality,
+            business excellence and sustainable performance.
+          </li>
+
+          <li>
+            Recognised for contributions to quality leadership,
+            professional development and industry knowledge sharing.
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- VISION FOR QXCELLENCE -->
+    <section class="founder-section">
+      <div class="container">
+
         <span class="eyebrow">THE QXCELLENCE VISION</span>
-        <h2>Making excellence a strategic advantage.</h2>
-        <p>
-          QXcellence was established to bridge the gap between
-          quality management, executive leadership, digital innovation
-          and measurable organisational performance.
-        </p>
-        <p>
-          Our ambition is to help organisations move beyond traditional
-          compliance-driven approaches and build intelligent,
-          resilient and performance-focused management systems.
+        <h2>Advancing quality through leadership, intelligence and innovation</h2>
+
+        <p class="section-intro">
+          QXcellence was established to help organisations move beyond
+          traditional quality management towards integrated,
+          performance-driven and digitally enabled approaches.
         </p>
 
-        <a class="button-link"
-           href="https://www.linkedin.com/in/osmanaboud/"
-           target="_blank" rel="noopener noreferrer">
-          Connect on LinkedIn
-        </a>
+        <div class="founder-cards">
 
-        <a class="button-link" href="contact.html">
-          Contact QXcellence
-        </a>
+          <div class="founder-card">
+            <h3>Advisory</h3>
+            <p>
+              Strategic quality advisory, management system improvement,
+              governance development and executive-level assurance.
+            </p>
+          </div>
+
+          <div class="founder-card">
+            <h3>Academy</h3>
+            <p>
+              Professional development, practical training and capability
+              building in quality, operational excellence and project
+              performance.
+            </p>
+          </div>
+
+          <div class="founder-card">
+            <h3>Digital Innovation</h3>
+            <p>
+              Exploring AI-enabled assurance, Quality 4.0, intelligent
+              inspections and data-driven performance improvement.
+            </p>
+          </div>
+
+        </div>
       </div>
+    </section>
+
+    <!-- CONTACT / CALL TO ACTION -->
+    <section class="founder-section">
+      <div class="container">
+
+        <div class="founder-cta">
+
+          <span class="eyebrow">CONNECT WITH QXCELLENCE</span>
+
+          <h2>Let's advance quality and organisational performance.</h2>
+
+          <p>
+            Whether you are looking to strengthen quality governance,
+            transform assurance processes, develop organisational
+            capabilities or explore AI-enabled quality solutions,
+            QXcellence welcomes meaningful professional engagement.
+          </p>
+
+          <div class="founder-links">
+
+            <a href="https://www.linkedin.com/in/osmanaboud/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Connect on LinkedIn
+            </a>
+
+            <a href="contact.html">
+              Contact QXcellence
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container copy">
+      © 2026 QXcellence by Osman Aboud. All rights reserved.
     </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container copy">
-    © 2026 QXcellence by Osman Aboud. All rights reserved.
-  </div>
-</footer>
+  </footer>
 
 </body>
 </html>
